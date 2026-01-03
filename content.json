@@ -1,0 +1,88 @@
+{
+  "business": {
+    "name": "BestHair",
+    "tagline": "Professional Hairdresser in Gold Coast",
+    "phone": "0400 123 456",
+    "email": "info@besthair.com.au",
+    "address": "Gold Coast",
+    "service": "Hairdresser",
+    "location": "Gold Coast"
+  },
+  "hero": {
+    "title": "Gold Coast's Trusted Hairdresser Experts",
+    "subtitle": "Professional, reliable service you can count on. Serving Gold Coast and surrounding areas.",
+    "cta": "Get a Free Quote"
+  },
+  "services": [
+    {
+      "title": "Hairdresser Services",
+      "description": "Complete hairdresser solutions for homes and businesses in Gold Coast.",
+      "icon": "wrench"
+    },
+    {
+      "title": "Emergency Hairdresser",
+      "description": "24/7 emergency service available. We're here when you need us most.",
+      "icon": "clock"
+    },
+    {
+      "title": "Free Quotes",
+      "description": "No obligation quotes for all hairdresser work. Transparent pricing guaranteed.",
+      "icon": "dollar"
+    }
+  ],
+  "about": {
+    "title": "Why Choose BestHair?",
+    "description": "With years of experience serving Gold Coast, we've built a reputation for quality workmanship and exceptional customer service. Our team of licensed professionals is committed to delivering the best hairdresser solutions for your needs.",
+    "features": [
+      "Licensed & Insured",
+      "Local Gold Coast Business",
+      "Satisfaction Guaranteed",
+      "Competitive Pricing"
+    ]
+  },
+  "testimonials": [
+    {
+      "name": "Sarah M.",
+      "location": "Gold Coast",
+      "text": "Fantastic service! The team was professional and completed the work quickly. Highly recommend!",
+      "rating": 5
+    },
+    {
+      "name": "John D.",
+      "location": "Gold Coast",
+      "text": "Best hairdresser service in the area. Fair prices and great communication throughout.",
+      "rating": 5
+    },
+    {
+      "name": "Lisa T.",
+      "location": "Gold Coast",
+      "text": "Called for an emergency and they were there within the hour. Couldn't be happier!",
+      "rating": 5
+    }
+  ],
+  "footer": {
+    "copyright": "© 2026 BestHair. All rights reserved.",
+    "areas": "Proudly serving Gold Coast and surrounding areas"
+  },
+  "seo": {
+    "title": "BestHair | Hairdresser in Gold Coast",
+    "description": "Professional hairdresser services in Gold Coast. Licensed, insured, and trusted by locals. Get a free quote today!",
+    "keywords": [
+      "Hairdresser",
+      "Gold Coast",
+      "Hairdresser Gold Coast",
+      "local hairdresser",
+      "Gold Coast hairdresser"
+    ]
+  },
+  "colors": {
+    "primary": "#f97316",
+    "secondary": "#1f2937",
+    "accent": "#fbbf24"
+  },
+  "images": {
+    "hero": "https://source.unsplash.com/1600x900/?hairdresser",
+    "about": "https://source.unsplash.com/800x600/?hairdresser,professional",
+    "logo": "/images/logo.png"
+  }
+}
