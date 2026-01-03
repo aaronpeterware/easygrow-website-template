@@ -1,169 +1,393 @@
 {
   "business": {
     "name": "BestHair",
-    "tagline": "Gold Coast's Most Trusted Hairdresser - Quality You Can Count On",
+    "tagline": "Gold Coast's Premier Hair Salon - Where Style Meets Excellence",
     "phone": "0400 123 456",
     "email": "info@besthair.com.au",
-    "address": "Gold Coast",
+    "address": "123 Main Street, Surfers Paradise",
+    "suburb": "Surfers Paradise",
+    "city": "Gold Coast",
+    "state": "QLD",
+    "postcode": "4217",
+    "country": "Australia",
     "service": "Hairdresser",
-    "location": "Gold Coast",
-    "abn": "",
-    "established": 2016
-  },
-  "hero": {
-    "title": "#1 Rated Hairdresser in Gold Coast",
-    "subtitle": "Transform your look with Gold Coast's premier hairdresser team. Over 10 years of experience delivering stunning results and exceptional service.",
-    "cta": "Book Your Appointment",
-    "stats": [
-      {
-        "value": "10+",
-        "label": "Years Experience"
-      },
-      {
-        "value": "5000+",
-        "label": "Happy Clients"
-      },
-      {
-        "value": "4.9",
-        "label": "Google Rating"
-      }
-    ]
+    "serviceSlug": "hairdresser",
+    "abn": "12 345 678 901",
+    "established": 2014,
+    "openingHours": {
+      "monday": "Closed",
+      "tuesday": "9:00 AM - 6:00 PM",
+      "wednesday": "9:00 AM - 6:00 PM",
+      "thursday": "9:00 AM - 8:00 PM",
+      "friday": "9:00 AM - 6:00 PM",
+      "saturday": "9:00 AM - 5:00 PM",
+      "sunday": "Closed"
+    },
+    "socialMedia": {
+      "facebook": "https://facebook.com/besthairgc",
+      "instagram": "https://instagram.com/besthairgc",
+      "google": "https://g.page/besthairgc"
+    }
   },
   "services": [
     {
-      "title": "Cuts & Styling",
-      "description": "Expert cuts and styling tailored to your unique features. Our Gold Coast stylists stay current with the latest trends while creating timeless looks.",
+      "title": "Women's Cut & Style",
+      "slug": "womens-cut-style",
+      "shortDescription": "Expert cuts tailored to your face shape and lifestyle",
+      "description": "Our master stylists create stunning cuts that complement your unique features. From classic bobs to modern layered styles, we deliver precision cuts that are easy to maintain at home. Every service includes a thorough consultation, relaxing shampoo, and professional blowdry styling.",
+      "price": "From $75",
+      "duration": "60 mins",
       "icon": "scissors",
-      "price": "From $45"
+      "features": [
+        "Detailed consultation",
+        "Precision cutting technique",
+        "Professional blowdry",
+        "Styling tips for home"
+      ],
+      "image": "https://images.unsplash.com/photo-1560066984-138dadb4c035?w=800&h=600&fit=crop"
     },
     {
-      "title": "Colour & Highlights",
-      "description": "Full colour, balayage, highlights and colour correction. We use premium products for vibrant, long-lasting results that protect your hair.",
+      "title": "Men's Cut & Style",
+      "slug": "mens-cut-style",
+      "shortDescription": "Sharp, modern cuts for the contemporary man",
+      "description": "From classic tapers to modern fades, our barber-trained stylists deliver precision men's cuts. Includes a relaxing scalp massage, hot towel treatment, and expert styling with premium products.",
+      "price": "From $45",
+      "duration": "45 mins",
+      "icon": "scissors",
+      "features": [
+        "Scalp massage",
+        "Hot towel treatment",
+        "Beard trim available",
+        "Product recommendations"
+      ],
+      "image": "https://images.unsplash.com/photo-1503951914875-452162b0f3f1?w=800&h=600&fit=crop"
+    },
+    {
+      "title": "Full Colour",
+      "slug": "full-colour",
+      "shortDescription": "Rich, vibrant colour that lasts",
+      "description": "Transform your look with our premium full colour service. We use only salon-exclusive products that are gentle on your hair while delivering stunning, long-lasting results. Includes a personalised colour consultation to find your perfect shade.",
+      "price": "From $120",
+      "duration": "90 mins",
       "icon": "palette",
-      "price": "From $120"
+      "features": [
+        "Colour consultation",
+        "Premium products",
+        "Grey coverage",
+        "Conditioning treatment"
+      ],
+      "image": "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=800&h=600&fit=crop"
     },
     {
-      "title": "Treatments & Care",
-      "description": "Revitalize damaged hair with our luxury treatments. Keratin smoothing, deep conditioning, and scalp therapy for healthy, beautiful hair.",
+      "title": "Balayage & Highlights",
+      "slug": "balayage-highlights",
+      "shortDescription": "Hand-painted dimension for natural-looking colour",
+      "description": "Our balayage specialists create stunning, sun-kissed highlights that grow out beautifully. This low-maintenance technique delivers natural-looking dimension that's completely customised to your hair colour and skin tone.",
+      "price": "From $180",
+      "duration": "150 mins",
+      "icon": "sun",
+      "features": [
+        "Hand-painted technique",
+        "Custom colour blend",
+        "Natural grow-out",
+        "Toner included"
+      ],
+      "image": "https://images.unsplash.com/photo-1620331311520-246422fd82f9?w=800&h=600&fit=crop"
+    },
+    {
+      "title": "Keratin Treatment",
+      "slug": "keratin-treatment",
+      "shortDescription": "Smooth, frizz-free hair for up to 4 months",
+      "description": "Say goodbye to frizz with our professional keratin smoothing treatment. Perfect for managing unruly, curly, or damaged hair. Results last 3-4 months, dramatically reducing styling time while leaving hair silky smooth and manageable.",
+      "price": "From $350",
+      "duration": "180 mins",
       "icon": "sparkles",
-      "price": "From $80"
+      "features": [
+        "Frizz elimination",
+        "Reduced styling time",
+        "Lasts 3-4 months",
+        "Safe for coloured hair"
+      ],
+      "image": "https://images.unsplash.com/photo-1519699047748-de8e457a634e?w=800&h=600&fit=crop"
     },
     {
-      "title": "Bridal & Events",
-      "description": "Make your special day unforgettable. Bridal packages include trial sessions, day-of styling, and group bookings for the whole wedding party.",
+      "title": "Bridal & Special Events",
+      "slug": "bridal-special-events",
+      "shortDescription": "Make your special day unforgettable",
+      "description": "Our bridal specialists create stunning looks for your most important moments. Packages include trial sessions, day-of styling, and options for your entire wedding party. We travel to your venue for ultimate convenience.",
+      "price": "From $250",
+      "duration": "Varies",
       "icon": "heart",
-      "price": "From $250"
+      "features": [
+        "Trial session included",
+        "On-location available",
+        "Bridal party packages",
+        "Touch-up kit provided"
+      ],
+      "image": "https://images.unsplash.com/photo-1595476108010-b4d1f102b1b1?w=800&h=600&fit=crop"
+    },
+    {
+      "title": "Hair Extensions",
+      "slug": "hair-extensions",
+      "shortDescription": "Add instant length and volume",
+      "description": "Premium tape-in and hand-tied extensions that blend seamlessly with your natural hair. We use only ethically-sourced, 100% human hair for the most natural look and feel. Full installation and maintenance guidance included.",
+      "price": "From $500",
+      "duration": "120 mins",
+      "icon": "layers",
+      "features": [
+        "100% human hair",
+        "Custom colour matching",
+        "6-8 weeks wear",
+        "Removal included"
+      ],
+      "image": "https://images.unsplash.com/photo-1522337094846-8a818192de1f?w=800&h=600&fit=crop"
+    },
+    {
+      "title": "Scalp Treatments",
+      "slug": "scalp-treatments",
+      "shortDescription": "Healthy scalp, healthy hair",
+      "description": "Address hair loss, dandruff, and scalp concerns with our therapeutic treatments. Using advanced trichology techniques and medical-grade products, we restore scalp health and promote optimal hair growth.",
+      "price": "From $95",
+      "duration": "45 mins",
+      "icon": "leaf",
+      "features": [
+        "Scalp analysis",
+        "Deep cleansing",
+        "Targeted treatment",
+        "Take-home products"
+      ],
+      "image": "https://images.unsplash.com/photo-1582095133179-bfd08e2fc6b3?w=800&h=600&fit=crop"
     }
   ],
-  "about": {
-    "title": "Why Gold Coast Chooses BestHair",
-    "description": "Since 2016, BestHair has been Gold Coast's destination for exceptional hairdresser services. Our passionate team combines artistic vision with technical expertise to help you look and feel your absolute best. We believe great hair starts with understanding your lifestyle, preferences, and goals.",
-    "mission": "Our mission is simple: deliver salon experiences that exceed expectations, using sustainable practices and premium products that are kind to your hair and the environment.",
-    "features": [
-      {
-        "title": "Licensed Professionals",
-        "desc": "Fully qualified stylists with ongoing training"
-      },
-      {
-        "title": "Premium Products",
-        "desc": "We only use salon-quality, sustainable products"
-      },
-      {
-        "title": "Hygiene Guaranteed",
-        "desc": "Strict sanitization protocols for your safety"
-      },
-      {
-        "title": "Free Consultations",
-        "desc": "Every visit starts with understanding your needs"
-      }
-    ]
-  },
+  "serviceAreas": [
+    {
+      "name": "Surfers Paradise",
+      "slug": "surfers-paradise",
+      "description": "Located in the heart of Surfers Paradise, we're your go-to destination for premium hair services. Just minutes from the beach, our salon offers a relaxing escape from the busy tourist strip."
+    },
+    {
+      "name": "Broadbeach",
+      "slug": "broadbeach",
+      "description": "Serving the Broadbeach community with exceptional hair services. We're just a short drive from Pacific Fair and the Broadbeach dining precinct."
+    },
+    {
+      "name": "Southport",
+      "slug": "southport",
+      "description": "Convenient for Southport residents, we offer the Gold Coast's best hair services with easy parking and a welcoming atmosphere."
+    },
+    {
+      "name": "Robina",
+      "slug": "robina",
+      "description": "Our expert team serves clients from Robina and surrounding suburbs. Experience premium hair care without the drive to the coast."
+    },
+    {
+      "name": "Burleigh Heads",
+      "slug": "burleigh-heads",
+      "description": "Just north of Burleigh Heads, we provide premium hair services for this vibrant beachside community."
+    },
+    {
+      "name": "Main Beach",
+      "slug": "main-beach",
+      "description": "Serving Main Beach residents with luxury hair services. Our salon is the perfect complement to this prestigious area."
+    }
+  ],
+  "team": [
+    {
+      "name": "Sarah Mitchell",
+      "role": "Salon Owner & Senior Stylist",
+      "bio": "With over 15 years of experience and training in London and Sydney, Sarah founded BestHair to bring world-class styling to the Gold Coast. She specialises in precision cutting and colour correction.",
+      "image": "https://images.unsplash.com/photo-1580618672591-eb180b1a973f?w=400&h=400&fit=crop",
+      "specialties": ["Colour Correction", "Precision Cutting", "Bridal"]
+    },
+    {
+      "name": "James Chen",
+      "role": "Senior Colourist",
+      "bio": "James is our resident colour expert with 10 years of experience. Trained at the L'Oréal Academy, he's known for creating stunning balayage and vivid fashion colours.",
+      "image": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop",
+      "specialties": ["Balayage", "Fashion Colours", "Colour Correction"]
+    },
+    {
+      "name": "Emma Thompson",
+      "role": "Stylist & Extension Specialist",
+      "bio": "Emma brings 8 years of experience and is certified in multiple extension methods. She's passionate about helping clients achieve their dream hair.",
+      "image": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&h=400&fit=crop",
+      "specialties": ["Extensions", "Styling", "Textured Hair"]
+    }
+  ],
   "testimonials": [
     {
-      "name": "Emma Richardson",
-      "location": "Gold Coast",
-      "text": "I've been coming to BestHair for 3 years and wouldn't go anywhere else. The team really listens and always delivers exactly what I'm looking for. Best hairdresser in Gold Coast!",
+      "name": "Michelle Stewart",
+      "location": "Surfers Paradise",
+      "text": "I've been coming to BestHair for 3 years and wouldn't trust anyone else with my balayage. Sarah and her team are true artists. The salon atmosphere is relaxing and the results are always Instagram-worthy!",
       "rating": 5,
-      "service": "Balayage & Cut"
+      "service": "Balayage & Highlights",
+      "date": "2024-11"
     },
     {
-      "name": "Sophie Chen",
-      "location": "Gold Coast",
-      "text": "Found my forever salon! The attention to detail is incredible, and the atmosphere is so relaxing. My colour has never looked better. Highly recommend to anyone in Gold Coast.",
+      "name": "David Nguyen",
+      "location": "Broadbeach",
+      "text": "Finally found a salon that does great men's cuts! James takes the time to understand exactly what I want. Quick, professional, and the hot towel treatment is a nice touch.",
       "rating": 5,
-      "service": "Full Colour"
-    },
-    {
-      "name": "Michael Torres",
-      "location": "Gold Coast",
-      "text": "Finally a barber-quality cut in a salon environment. Quick, professional, and they actually remember how I like my hair. Great value for the quality.",
-      "rating": 5,
-      "service": "Men's Cut & Style"
+      "service": "Men's Cut & Style",
+      "date": "2024-10"
     },
     {
       "name": "Jessica Williams",
-      "location": "Gold Coast",
-      "text": "BestHair did my bridal hair and I couldn't have been happier. They made me feel so beautiful on my big day. The trial was thorough and the day-of service was flawless.",
+      "location": "Robina",
+      "text": "BestHair did my bridal hair and I couldn't have been happier. The trial was thorough, and on my wedding day, Sarah was calm and professional. My hair lasted all night through dancing!",
       "rating": 5,
-      "service": "Bridal Package"
+      "service": "Bridal Package",
+      "date": "2024-09"
+    },
+    {
+      "name": "Amanda Chen",
+      "location": "Southport",
+      "text": "I had a colour disaster at another salon and Sarah fixed it beautifully. She was honest about what was possible and the result exceeded my expectations. True professionals!",
+      "rating": 5,
+      "service": "Colour Correction",
+      "date": "2024-11"
+    },
+    {
+      "name": "Sophie Brown",
+      "location": "Main Beach",
+      "text": "The keratin treatment has changed my life! I used to spend 45 minutes straightening my frizzy hair every morning. Now it air dries perfectly. Worth every cent.",
+      "rating": 5,
+      "service": "Keratin Treatment",
+      "date": "2024-08"
+    },
+    {
+      "name": "Rachel Green",
+      "location": "Burleigh Heads",
+      "text": "Emma did my tape-in extensions and they look so natural that even my friends didn't realise! She matched the colour perfectly and taught me how to care for them properly.",
+      "rating": 5,
+      "service": "Hair Extensions",
+      "date": "2024-10"
     }
   ],
   "faq": [
     {
-      "q": "What are your opening hours?",
-      "a": "We're open Tuesday to Saturday, 9am-6pm, with late nights on Thursday until 8pm. Closed Sunday and Monday."
+      "question": "How do I book an appointment?",
+      "answer": "You can book online through our website 24/7, call us on 0400 123 456 during business hours, or send us an Instagram DM. We recommend booking colour appointments at least a week in advance."
     },
     {
-      "q": "Do I need to book an appointment?",
-      "a": "We recommend booking in advance to secure your preferred time, but we do accept walk-ins when availability allows."
+      "question": "What is your cancellation policy?",
+      "answer": "We require 24 hours notice for cancellations or rescheduling. Late cancellations or no-shows may incur a 50% service fee. We understand emergencies happen and will always work with you."
     },
     {
-      "q": "What products do you use?",
-      "a": "We exclusively use premium, salon-quality products that are gentle on your hair and the environment."
+      "question": "Do you offer free consultations?",
+      "answer": "Yes! We offer complimentary 15-minute consultations for colour services, extensions, and keratin treatments. This helps us understand your goals and provide an accurate quote."
     },
     {
-      "q": "Do you offer parking?",
-      "a": "Yes! Free parking is available directly behind our salon, with additional street parking nearby."
+      "question": "What hair products do you use?",
+      "answer": "We exclusively use salon-professional products including Olaplex, Kevin Murphy, and L'Oréal Professionnel. All our colour is ammonia-free and we offer vegan options."
+    },
+    {
+      "question": "Is parking available?",
+      "answer": "Yes! Free 2-hour parking is available directly behind our salon. There's also metered street parking and the nearby Cavill Avenue parking station."
+    },
+    {
+      "question": "Do you cater to curly and textured hair?",
+      "answer": "Absolutely! Several of our stylists specialise in curly cutting techniques including DevaCut. We understand that curly hair has unique needs and we're here to help you embrace your natural texture."
+    },
+    {
+      "question": "What safety measures do you have in place?",
+      "answer": "We maintain the highest hygiene standards with hospital-grade sanitisation of all tools, fresh capes and towels for every client, and thorough cleaning between appointments."
+    },
+    {
+      "question": "Do you offer wedding and event packages?",
+      "answer": "Yes! We offer comprehensive bridal packages including trial sessions, day-of styling, and group bookings for your wedding party. We also travel to your venue for destination weddings."
     }
   ],
-  "footer": {
-    "copyright": "© 2026 BestHair. All rights reserved. ABN pending.",
-    "areas": "Proudly serving Gold Coast, and surrounding suburbs",
-    "hours": "Tue-Sat 9am-6pm | Thu late night 8pm"
+  "about": {
+    "title": "The Gold Coast's Most Trusted Salon Since 2014",
+    "story": "BestHair was founded by Sarah Mitchell in 2014 with a simple mission: to bring world-class hair styling to the Gold Coast. After training in London and working in Sydney's top salons, Sarah returned to her hometown to create a salon that combines technical excellence with a relaxed, beachy Gold Coast vibe.\n\nToday, our team of skilled stylists shares Sarah's passion for creating beautiful hair that makes every client feel confident. We've built our reputation on honesty, expertise, and results that speak for themselves.\n\nWhether you're after a simple trim or a complete transformation, we're here to make your hair dreams a reality.",
+    "mission": "Our mission is to deliver exceptional hair services in a welcoming environment, using sustainable practices and premium products that are kind to your hair and the planet.",
+    "values": [
+      {
+        "title": "Excellence",
+        "description": "We never stop learning. Our team regularly trains with industry leaders to stay at the forefront of techniques and trends."
+      },
+      {
+        "title": "Honesty",
+        "description": "We'll always give you honest advice about what's achievable for your hair type and lifestyle."
+      },
+      {
+        "title": "Sustainability",
+        "description": "We're committed to eco-friendly practices, from our recyclable packaging to our water-saving basins."
+      }
+    ],
+    "features": [
+      "Licensed & Award-Winning Stylists",
+      "Locally Owned & Operated Since 2014",
+      "Eco-Friendly & Sustainable Practices",
+      "Premium Salon-Only Products",
+      "Complimentary Consultations",
+      "Easy Parking Available"
+    ]
   },
+  "gallery": [
+    {
+      "image": "https://images.unsplash.com/photo-1620331311520-246422fd82f9?w=600&h=600&fit=crop",
+      "alt": "Blonde balayage on long hair",
+      "category": "Colour"
+    },
+    {
+      "image": "https://images.unsplash.com/photo-1621605815971-fbc98d665033?w=600&h=600&fit=crop",
+      "alt": "Modern men's fade haircut",
+      "category": "Men's"
+    },
+    {
+      "image": "https://images.unsplash.com/photo-1519741497674-611481863552?w=600&h=600&fit=crop",
+      "alt": "Elegant bridal updo",
+      "category": "Bridal"
+    },
+    {
+      "image": "https://images.unsplash.com/photo-1492106087820-71f1a00d2b11?w=600&h=600&fit=crop",
+      "alt": "Precision bob haircut",
+      "category": "Cuts"
+    },
+    {
+      "image": "https://images.unsplash.com/photo-1605497788044-5a32c7078486?w=600&h=600&fit=crop",
+      "alt": "Vibrant fashion colour",
+      "category": "Colour"
+    },
+    {
+      "image": "https://images.unsplash.com/photo-1522337094846-8a818192de1f?w=600&h=600&fit=crop",
+      "alt": "Natural-looking hair extensions",
+      "category": "Extensions"
+    }
+  ],
   "seo": {
-    "title": "BestHair | Best Hairdresser in Gold Coast | Book Online",
-    "description": "Gold Coast's top-rated hairdresser salon. Expert cuts, colour, and styling with 10+ years experience. 5-star reviews. Book your appointment today!",
+    "siteName": "BestHair Gold Coast",
+    "siteUrl": "https://besthair.com.au",
+    "title": "BestHair | Best Hairdresser Gold Coast | Surfers Paradise Hair Salon",
+    "description": "Gold Coast's top-rated hair salon in Surfers Paradise. Expert cuts, balayage, colour & extensions. Award-winning stylists, premium products. Book online today!",
     "keywords": [
-      "hairdresser Gold Coast",
-      "best hairdresser Gold Coast",
-      "Gold Coast hairdresser",
-      "hair salon Gold Coast",
-      "hairdresser near me",
-      "Gold Coast hair colour",
-      "balayage Gold Coast",
-      "BestHair"
-    ],
-    "ogImage": "https://source.unsplash.com/1200x630/?hairdresser,salon"
-  },
-  "colors": {
-    "primary": "#f97316",
-    "secondary": "#1f2937",
-    "accent": "#fbbf24"
-  },
-  "images": {
-    "hero": "https://source.unsplash.com/1600x900/?hairdresser,salon,modern",
-    "about": "https://source.unsplash.com/800x600/?hairdresser,professional,team",
-    "gallery": [
-      "https://source.unsplash.com/400x400/?hair,style,1",
-      "https://source.unsplash.com/400x400/?hair,colour,2",
-      "https://source.unsplash.com/400x400/?salon,interior,3",
-      "https://source.unsplash.com/400x400/?hairstyle,4"
-    ],
-    "logo": "/images/logo.png"
+      "hairdresser gold coast",
+      "hair salon surfers paradise",
+      "balayage gold coast",
+      "best hairdresser gold coast",
+      "hair colour gold coast",
+      "bridal hair gold coast",
+      "hair extensions gold coast",
+      "keratin treatment gold coast",
+      "mens haircut gold coast",
+      "gold coast hair stylist"
+    ]
   },
   "schema": {
-    "type": "LocalBusiness",
+    "type": "HairSalon",
     "priceRange": "$$"
+  },
+  "colors": {
+    "primary": "#be185d",
+    "primaryLight": "#ec4899",
+    "secondary": "#1f2937",
+    "accent": "#f59e0b"
+  },
+  "cta": {
+    "primary": "Book Online",
+    "secondary": "Call Now",
+    "consultation": "Free Consultation"
   }
 }
