@@ -21,7 +21,7 @@ export default function Header() {
         <div className="flex items-center justify-between h-16 lg:h-20">
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-2">
-            <div className="w-10 h-10 bg-gradient-to-br from-pink-600 to-pink-400 rounded-lg flex items-center justify-center">
+            <div className="w-10 h-10 bg-gradient-to-br from-brand to-brand-light rounded-lg flex items-center justify-center">
               <span className="text-white font-bold text-xl">
                 {content.business.name.charAt(0)}
               </span>
@@ -37,7 +37,7 @@ export default function Header() {
               <Link
                 key={item.name}
                 href={item.href}
-                className="text-gray-600 hover:text-pink-600 font-medium transition-colors"
+                className="text-gray-600 hover:text-brand font-medium transition-colors"
               >
                 {item.name}
               </Link>
@@ -48,15 +48,15 @@ export default function Header() {
           <div className="hidden lg:flex items-center space-x-4">
             <a
               href={`tel:${content.business.phone}`}
-              className="text-gray-700 hover:text-pink-600 font-medium"
+              className="text-gray-700 hover:text-brand font-medium"
             >
               {content.business.phone}
             </a>
             <Link
               href="/contact"
-              className="bg-pink-600 hover:bg-pink-700 text-white px-5 py-2.5 rounded-full font-semibold transition-colors"
+              className="bg-brand hover:bg-brand-dark text-white px-5 py-2.5 rounded-full font-semibold transition-colors"
             >
-              Book Now
+              Get Quote
             </Link>
           </div>
 
@@ -87,7 +87,7 @@ export default function Header() {
                   key={item.name}
                   href={item.href}
                   onClick={() => setMobileMenuOpen(false)}
-                  className="text-gray-600 hover:text-pink-600 font-medium py-2"
+                  className="text-gray-600 hover:text-brand font-medium py-2"
                 >
                   {item.name}
                 </Link>
@@ -95,16 +95,16 @@ export default function Header() {
               <div className="pt-4 border-t flex flex-col space-y-3">
                 <a
                   href={`tel:${content.business.phone}`}
-                  className="text-pink-600 font-semibold text-center py-2"
+                  className="text-brand font-semibold text-center py-2"
                 >
                   Call: {content.business.phone}
                 </a>
                 <Link
                   href="/contact"
                   onClick={() => setMobileMenuOpen(false)}
-                  className="bg-pink-600 text-white text-center py-3 rounded-full font-semibold"
+                  className="bg-brand text-white text-center py-3 rounded-full font-semibold"
                 >
-                  Book Now
+                  Get Quote
                 </Link>
               </div>
             </div>

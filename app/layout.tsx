@@ -69,9 +69,21 @@ export default function RootLayout({
   const localBusinessSchema = generateLocalBusinessSchema();
   const faqSchema = generateFAQSchema();
 
+  // Dynamic color CSS variables from content.json
+  const colorStyles = `
+    :root {
+      --color-primary: ${content.colors?.primary || '#2563eb'};
+      --color-primary-light: ${content.colors?.primaryLight || '#3b82f6'};
+      --color-secondary: ${content.colors?.secondary || '#1f2937'};
+      --color-accent: ${content.colors?.accent || '#f59e0b'};
+    }
+  `;
+
   return (
     <html lang="en" className="scroll-smooth">
       <head>
+        {/* Dynamic brand colors */}
+        <style dangerouslySetInnerHTML={{ __html: colorStyles }} />
         {/* Local Business Schema */}
         <script
           type="application/ld+json"
