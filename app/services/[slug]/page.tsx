@@ -67,13 +67,13 @@ export default async function ServicePage({ params }: Props) {
           </nav>
 
           <div className="max-w-3xl">
-            <span className="inline-block bg-pink-600/20 text-pink-400 px-4 py-1 rounded-full text-sm font-medium mb-4">
+            <span className="inline-block bg-brand/20 text-brand-light px-4 py-1 rounded-full text-sm font-medium mb-4">
               {service.price} • {service.duration}
             </span>
             <h1 className="text-4xl sm:text-5xl font-bold text-white mb-6">{service.title}</h1>
             <p className="text-xl text-gray-300 mb-8">{service.shortDescription}</p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <Link href="/contact" className="inline-flex items-center justify-center gap-2 bg-pink-600 hover:bg-pink-700 text-white px-8 py-4 rounded-full text-lg font-semibold transition-all">
+              <Link href="/contact" className="inline-flex items-center justify-center gap-2 bg-brand hover:bg-brand-dark text-white px-8 py-4 rounded-full text-lg font-semibold transition-all">
                 Book This Service
               </Link>
               <a href={`tel:${business.phone}`} className="inline-flex items-center justify-center gap-2 border-2 border-white/30 text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-white hover:text-gray-900 transition-all">
@@ -108,13 +108,13 @@ export default async function ServicePage({ params }: Props) {
                 <h3>Why Choose {business.name} for {service.title}?</h3>
                 <p>
                   At {business.name}, we&apos;ve been delivering exceptional {service.title.toLowerCase()} services to
-                  {business.city} clients since {business.established}. Our team of expert stylists combines years
-                  of experience with ongoing training to ensure you receive the best results every time.
+                  {business.city} clients since {business.established}. Our experienced team combines years
+                  of expertise with ongoing training to ensure you receive the best results every time.
                 </p>
                 <p>
-                  We use only premium, salon-exclusive products that are gentle on your hair while delivering
-                  stunning, long-lasting results. Every service begins with a thorough consultation to understand
-                  your goals and ensure we deliver exactly what you&apos;re looking for.
+                  We use only premium, professional-grade equipment and products that deliver
+                  outstanding, long-lasting results. Every service begins with a thorough assessment to understand
+                  your needs and ensure we deliver exactly what you&apos;re looking for.
                 </p>
               </div>
 
@@ -144,7 +144,7 @@ export default async function ServicePage({ params }: Props) {
             {/* Right - Sidebar */}
             <div className="lg:col-span-1">
               {/* Booking Card */}
-              <div className="bg-pink-50 rounded-xl p-6 mb-8 sticky top-24">
+              <div className="bg-brand/10 rounded-xl p-6 mb-8 sticky top-24">
                 <h3 className="text-xl font-bold text-gray-900 mb-4">Book {service.title}</h3>
                 <div className="space-y-4 mb-6">
                   <div className="flex justify-between">
@@ -156,11 +156,11 @@ export default async function ServicePage({ params }: Props) {
                     <span className="font-semibold text-gray-900">{service.duration}</span>
                   </div>
                 </div>
-                <Link href="/contact" className="block w-full bg-pink-600 hover:bg-pink-700 text-white text-center px-6 py-3 rounded-full font-semibold transition-colors">
-                  Book Now
+                <Link href="/contact" className="block w-full bg-brand hover:bg-brand-dark text-white text-center px-6 py-3 rounded-full font-semibold transition-colors">
+                  Get a Quote
                 </Link>
                 <p className="text-center text-sm text-gray-500 mt-4">
-                  Free consultation included
+                  Free quotes available
                 </p>
               </div>
 
@@ -174,7 +174,7 @@ export default async function ServicePage({ params }: Props) {
                         <img src={s.image} alt={s.title} className="w-full h-full object-cover" />
                       </div>
                       <div>
-                        <div className="font-semibold text-gray-900 group-hover:text-pink-600 transition-colors">{s.title}</div>
+                        <div className="font-semibold text-gray-900 group-hover:text-brand transition-colors">{s.title}</div>
                         <div className="text-sm text-gray-500">{s.price}</div>
                       </div>
                     </Link>
@@ -189,10 +189,10 @@ export default async function ServicePage({ params }: Props) {
       {/* CTA */}
       <section className="py-16 bg-gray-900">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl font-bold text-white mb-4">Ready for Amazing Hair?</h2>
-          <p className="text-gray-400 mb-8">Book your {service.title.toLowerCase()} appointment today</p>
-          <Link href="/contact" className="inline-flex items-center justify-center gap-2 bg-pink-600 hover:bg-pink-700 text-white px-8 py-4 rounded-full text-lg font-semibold transition-all">
-            Book Now
+          <h2 className="text-3xl font-bold text-white mb-4">{content.copy?.ctaTitle || `Ready for Professional ${business.service}?`}</h2>
+          <p className="text-gray-400 mb-8">Book your {service.title.toLowerCase()} today</p>
+          <Link href="/contact" className="inline-flex items-center justify-center gap-2 bg-brand hover:bg-brand-dark text-white px-8 py-4 rounded-full text-lg font-semibold transition-all">
+            Get a Free Quote
           </Link>
         </div>
       </section>
