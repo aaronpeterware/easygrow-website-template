@@ -18,10 +18,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   const { business } = content;
   return {
-    title: `${business.service} ${area.name} | ${business.name}`,
-    description: `Professional ${business.service.toLowerCase()} services in ${area.name}. ${area.description}`,
+    title: `${business.name} ${area.name} | Professional Services`,
+    description: `Professional services in ${area.name}. ${area.description}`,
     openGraph: {
-      title: `${business.service} in ${area.name} - ${business.name}`,
+      title: `${business.name} in ${area.name}`,
       description: `${area.description} Book your appointment today.`,
     },
   };
@@ -71,7 +71,7 @@ export default async function AreaPage({ params }: Props) {
               <span className="text-brand-light font-medium">Serving {area.name}</span>
             </div>
             <h1 className="text-4xl sm:text-5xl font-bold text-white mb-6">
-              {business.service} in {area.name}
+              {business.name} in {area.name}
             </h1>
             <p className="text-xl text-gray-300 mb-8">{area.description}</p>
             <div className="flex flex-col sm:flex-row gap-4">
@@ -122,7 +122,7 @@ export default async function AreaPage({ params }: Props) {
                 Why {area.name} Clients Choose {business.name}
               </h2>
               <p className="text-gray-600 mb-6">
-                Since {business.established}, we&apos;ve been providing professional {business.service.toLowerCase()} services
+                Since {business.established}, we&apos;ve been providing professional services
                 to clients in {area.name} and the greater {business.city} region.
               </p>
               <p className="text-gray-600 mb-8">
@@ -150,7 +150,7 @@ export default async function AreaPage({ params }: Props) {
               </ul>
             </div>
             <div className="aspect-[4/3] rounded-2xl overflow-hidden shadow-xl">
-              <img src={content.images?.hero || "https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800&h=600&fit=crop"} alt={`${business.name} ${business.service}`} className="w-full h-full object-cover" />
+              <img src={content.images?.hero || "https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800&h=600&fit=crop"} alt={`${business.name} - Professional Services`} className="w-full h-full object-cover" />
             </div>
           </div>
         </div>
@@ -197,7 +197,7 @@ export default async function AreaPage({ params }: Props) {
                 <svg className="w-5 h-5 text-brand" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                 </svg>
-                <span className="font-medium text-gray-900">{business.service} {a.name}</span>
+                <span className="font-medium text-gray-900">{a.name}</span>
               </Link>
             ))}
           </div>
@@ -205,19 +205,20 @@ export default async function AreaPage({ params }: Props) {
       </section>
 
       {/* CTA */}
-      <section className="py-16 bg-gradient-to-br from-brand to-brand-dark">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <section className="py-16 bg-gray-900 relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-brand/20 to-brand-dark/30" />
+        <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-bold text-white mb-4">
             Get a Free Quote in {area.name}
           </h2>
-          <p className="text-white/90 mb-8">
+          <p className="text-gray-300 mb-8">
             Join thousands of satisfied clients in {area.name}. Contact us today for a free quote.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/contact" className="inline-flex items-center justify-center gap-2 bg-white text-brand px-8 py-4 rounded-full text-lg font-semibold hover:shadow-xl transition-all">
+            <Link href="/contact" className="inline-flex items-center justify-center gap-2 bg-brand hover:bg-brand-light text-white px-8 py-4 rounded-full text-lg font-semibold hover:shadow-xl transition-all">
               Get Free Quote
             </Link>
-            <a href={`tel:${business.phone}`} className="inline-flex items-center justify-center gap-2 border-2 border-white text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-white hover:text-brand transition-all">
+            <a href={`tel:${business.phone}`} className="inline-flex items-center justify-center gap-2 border-2 border-white text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-white hover:text-gray-900 transition-all">
               Call {business.phone}
             </a>
           </div>

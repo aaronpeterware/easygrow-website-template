@@ -68,7 +68,7 @@ export default function Footer() {
               {serviceAreas.map((area) => (
                 <li key={area.slug}>
                   <Link href={`/areas/${area.slug}`} className="text-gray-400 hover:text-brand-light transition-colors">
-                    {business.service} {area.name}
+                    {area.name}
                   </Link>
                 </li>
               ))}

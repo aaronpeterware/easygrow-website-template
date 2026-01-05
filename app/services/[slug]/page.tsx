@@ -187,11 +187,12 @@ export default async function ServicePage({ params }: Props) {
       </section>
 
       {/* CTA */}
-      <section className="py-16 bg-gray-900">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl font-bold text-white mb-4">{content.copy?.ctaTitle || `Ready for Professional ${business.service}?`}</h2>
-          <p className="text-gray-400 mb-8">Book your {service.title.toLowerCase()} today</p>
-          <Link href="/contact" className="inline-flex items-center justify-center gap-2 bg-brand hover:bg-brand-dark text-white px-8 py-4 rounded-full text-lg font-semibold transition-all">
+      <section className="py-16 bg-gray-900 relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-brand/20 to-brand-dark/30" />
+        <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-3xl font-bold text-white mb-4">{content.copy?.ctaTitle || 'Ready to Get Started?'}</h2>
+          <p className="text-gray-300 mb-8">Book your {service.title.toLowerCase()} today</p>
+          <Link href="/contact" className="inline-flex items-center justify-center gap-2 bg-brand hover:bg-brand-light text-white px-8 py-4 rounded-full text-lg font-semibold transition-all">
             Get a Free Quote
           </Link>
         </div>

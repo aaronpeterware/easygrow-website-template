@@ -1,16 +1,32 @@
 import Link from 'next/link';
 import { content } from '@/lib/content';
 
+// Helper to properly format service names (capitalize each word, clean up phrases)
+function formatServiceName(service: string): string {
+  // If it looks like a sentence/phrase (starts lowercase or contains "ing"), use business name instead
+  if (/^[a-z]/.test(service) || /\b(selling|providing|offering)\b/i.test(service)) {
+    return 'Our Services';
+  }
+  // Title case: capitalize first letter of each word
+  return service
+    .split(' ')
+    .map(word => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase())
+    .join(' ');
+}
+
 export default function Home() {
   const { business, services, serviceAreas, testimonials, faq, about, team, gallery } = content;
 
+  // Format the service name properly
+  const formattedService = formatServiceName(business.service);
+
   // Dynamic content based on service type - use content.copy if available, otherwise generate
   const copy = content.copy || {
-    heroSubtitle: `Professional ${business.service.toLowerCase()} services with quality results guaranteed.`,
+    heroSubtitle: `Professional services with quality results guaranteed.`,
     servicesSubtitle: `From routine maintenance to specialized services, our expert team delivers exceptional results.`,
     teamTitle: 'Meet Our Team',
-    teamSubtitle: `Experienced professionals dedicated to delivering quality ${business.service.toLowerCase()} services.`,
-    ctaTitle: `Ready for Professional ${business.service}?`,
+    teamSubtitle: `Experienced professionals dedicated to delivering quality service.`,
+    ctaTitle: `Ready to Get Started?`,
     ctaSubtitle: `Get a free quote today and experience the ${business.name} difference.`,
   };
 
@@ -43,7 +59,7 @@ export default function Home() {
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6">
               {business.city}&apos;s Trusted<br />
               <span className="text-brand-light">
-                {business.service}
+                {formattedService}
               </span>
             </h1>
 
@@ -367,7 +383,7 @@ export default function Home() {
                   </div>
                   <div>
                     <h3 className="text-lg font-bold text-gray-900 group-hover:text-brand transition-colors">
-                      {business.service} {area.name}
+                      {formattedService} in {area.name}
                     </h3>
                     <p className="text-gray-600 text-sm mt-1">{area.description}</p>
                   </div>
@@ -406,19 +422,21 @@ export default function Home() {
         </section>
       )}
 
-      {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-br from-brand to-brand-dark">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      {/* CTA Section - Always uses dark background for guaranteed visibility */}
+      <section className="py-20 bg-gray-900 relative overflow-hidden">
+        {/* Subtle brand color overlay */}
+        <div className="absolute inset-0 bg-gradient-to-br from-brand/20 to-brand-dark/30" />
+        <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
             {copy.ctaTitle}
           </h2>
-          <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
+          <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
             {copy.ctaSubtitle}
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href="/contact"
-              className="inline-flex items-center justify-center gap-2 bg-white text-brand px-8 py-4 rounded-full text-lg font-semibold hover:shadow-xl transition-all"
+              className="inline-flex items-center justify-center gap-2 bg-brand hover:bg-brand-light text-white px-8 py-4 rounded-full text-lg font-semibold hover:shadow-xl transition-all"
             >
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
@@ -427,7 +445,7 @@ export default function Home() {
             </Link>
             <a
               href={`tel:${business.phone}`}
-              className="inline-flex items-center justify-center gap-2 border-2 border-white text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-white hover:text-brand transition-all"
+              className="inline-flex items-center justify-center gap-2 border-2 border-white text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-white hover:text-gray-900 transition-all"
             >
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />

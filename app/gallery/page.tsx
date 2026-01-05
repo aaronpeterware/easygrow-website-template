@@ -4,7 +4,7 @@ import { content } from '@/lib/content';
 
 export const metadata: Metadata = {
   title: `Gallery | ${content.business.name}`,
-  description: `View our portfolio of work. See examples of our ${content.business.service.toLowerCase()} services from ${content.business.name}.`,
+  description: `View our portfolio of work. See examples of our services from ${content.business.name}.`,
 };
 
 export default function GalleryPage() {
@@ -29,7 +29,7 @@ export default function GalleryPage() {
           <div className="max-w-3xl">
             <h1 className="text-4xl sm:text-5xl font-bold text-white mb-6">Our Work</h1>
             <p className="text-xl text-gray-300">
-              Browse through examples of our {business.service.toLowerCase()} work.
+              Browse through examples of our work.
               Quality results that speak for themselves.
             </p>
           </div>
@@ -126,11 +126,12 @@ export default function GalleryPage() {
       </section>
 
       {/* CTA */}
-      <section className="py-16 bg-brand">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <section className="py-16 bg-gray-900 relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-brand/20 to-brand-dark/30" />
+        <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-bold text-white mb-4">Ready to Get Started?</h2>
-          <p className="text-white/90 mb-8">Book your appointment today and let us deliver exceptional results.</p>
-          <Link href="/contact" className="inline-flex items-center justify-center gap-2 bg-white text-brand px-8 py-4 rounded-full text-lg font-semibold hover:shadow-xl transition-all">
+          <p className="text-gray-300 mb-8">Book your appointment today and let us deliver exceptional results.</p>
+          <Link href="/contact" className="inline-flex items-center justify-center gap-2 bg-brand hover:bg-brand-light text-white px-8 py-4 rounded-full text-lg font-semibold hover:shadow-xl transition-all">
             Get a Free Quote
           </Link>
         </div>
