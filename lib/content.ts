@@ -91,7 +91,7 @@ export function generateLocalBusinessSchema() {
         "closes": hours.split(" - ")[1]
       })),
     "priceRange": content.schema.priceRange,
-    "image": getHeroImage(content.business.service),
+    "image": content.images?.hero || getHeroImage(content.business.service),
     "sameAs": Object.values(content.business.socialMedia)
   };
 }
