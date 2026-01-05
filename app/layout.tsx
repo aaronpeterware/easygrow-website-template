@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     description: content.seo.description,
     images: [
       {
-        url: `https://images.unsplash.com/photo-1560066984-138dadb4c035?w=1200&h=630&fit=crop`,
+        url: content.images?.hero || `https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=1200&h=630&fit=crop`,
         width: 1200,
         height: 630,
         alt: `${content.business.name} - ${content.business.service} in ${content.business.city}`,
@@ -43,7 +43,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: content.seo.title,
     description: content.seo.description,
-    images: [`https://images.unsplash.com/photo-1560066984-138dadb4c035?w=1200&h=630&fit=crop`],
+    images: [content.images?.hero || `https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=1200&h=630&fit=crop`],
   },
   robots: {
     index: true,
