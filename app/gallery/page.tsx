@@ -12,7 +12,7 @@ export default function GalleryPage() {
 
   // Get unique categories from gallery items, or use service-based categories
   const categories = gallery.length > 0
-    ? [...new Set(gallery.map(g => g.category))]
+    ? Array.from(new Set(gallery.map(g => g.category)))
     : services.slice(0, 4).map(s => s.title.split(' ')[0]);
 
   return (
