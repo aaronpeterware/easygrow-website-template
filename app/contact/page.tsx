@@ -4,8 +4,8 @@ import { content } from '@/lib/content';
 import ContactForm from '@/app/components/ContactForm';
 
 export const metadata: Metadata = {
-  title: `Contact & Book | ${content.business.name}`,
-  description: `Book your appointment at ${content.business.name}. Located in ${content.business.suburb}, ${content.business.city}. Call ${content.business.phone} or book online.`,
+  title: `Contact Us | ${content.business.name}`,
+  description: `Contact ${content.business.name} for a free quote. Serving ${content.business.suburb}, ${content.business.city}. Call ${content.business.phone} or request a quote online.`,
 };
 
 export default function ContactPage() {
@@ -25,7 +25,7 @@ export default function ContactPage() {
           <div className="max-w-3xl">
             <h1 className="text-4xl sm:text-5xl font-bold text-white mb-6">Get a Free Quote</h1>
             <p className="text-xl text-gray-300">
-              Ready to get started? Contact us for a free quote or book online.
+              Ready to get started? Contact our team for a free, no-obligation quote.
             </p>
           </div>
         </div>

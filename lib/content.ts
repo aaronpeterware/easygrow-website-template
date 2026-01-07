@@ -79,8 +79,8 @@ export function generateLocalBusinessSchema() {
     },
     "geo": {
       "@type": "GeoCoordinates",
-      "latitude": -28.0023,
-      "longitude": 153.4145
+      "latitude": (content.business as any).geo?.latitude || -33.8688,
+      "longitude": (content.business as any).geo?.longitude || 151.2093
     },
     "openingHoursSpecification": Object.entries(content.business.openingHours)
       .filter(([_, hours]) => hours !== "Closed")

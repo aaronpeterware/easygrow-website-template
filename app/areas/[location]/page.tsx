@@ -22,7 +22,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     description: `Professional services in ${area.name}. ${area.description}`,
     openGraph: {
       title: `${business.name} in ${area.name}`,
-      description: `${area.description} Book your appointment today.`,
+      description: `${area.description} Contact us for a free quote.`,
     },
   };
 }
